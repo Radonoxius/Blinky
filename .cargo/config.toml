@@ -1,0 +1,9 @@
+[target.thumbv7em-none-eabihf]
+linker = "arm-none-eabi-gcc"
+rustflags = [
+    "-C", "link-args=-Tlinker.x -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16",
+    "-C", "target-cpu=cortex-m4"
+]
+
+[build]
+target = "thumbv7em-none-eabihf"
